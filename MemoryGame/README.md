@@ -1,4 +1,4 @@
-#Memory Game
+Memory Game
 
 This is a simple memory game that I built using javaFx and my first program that actually utilized the concepts of OOP. After going back over it, I noticed several improper uses of my methods and variables which could have dramatically shortened the code and made it more clear for anyone else who may have needed to look at it. However, I was pretty happy with how this one turned out considering I was totally new to javaFx and only had a few days to complete it. 
 My favorite feauture of the program is the on screen keyboard. I made it using a gridPane and setting the buttons(keys) within the grid. The most complicated button to make was the backspace key. It took me some time to think through how it should work in the program, and which methods would be best to accomplish the task. I ended up using the StringBuilder() to copy and edit text when it was clicked. It took a while to get it correct, but it works like a charm (for this program anyway). With a little tweaking the keyboard could be more portable, but as it is my first, I will leave like it is. 

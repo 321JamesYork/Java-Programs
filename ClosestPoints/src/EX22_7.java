@@ -133,7 +133,8 @@ public class EX22_7 {
          ************************************************************************
          */
         public static Pair getClosestPair(double[][] points){
-            System.out.println("getClosestPair double[][] invoked");
+            /**System.out.println("getClosestPair double[][] invoked");
+             * used to test*/
             Point[] points2 = new Point[points.length];
 
             for(int i = 0; i < points.length; i++)
@@ -158,7 +159,8 @@ public class EX22_7 {
          */
         public static Pair getClosestPair(Point[] points){
 
-            System.out.println("getClosestPair Point[] invoked");
+            /** System.out.println("getClosestPair Point[] invoked");
+             * used to test*/
             Arrays.sort(points);
             Point[] pointsOrderedOnY = points.clone();
             Arrays.sort(pointsOrderedOnY, new CompareY());
@@ -182,8 +184,10 @@ public class EX22_7 {
          */
         public static Pair distance(Point[] pointsOrderedOnX, int low,
                                     int high, Point[] pointsOrderedOnY){
+           /**
             System.out.println("Pair distance Point[] pOderOnX, low, high, Point[]"
-                    + " pOrderOnY");
+                   + " pOrderOnY");
+            used to test */
             if(low >=high) { // check that array has more than one element.
                 return null;
             }
@@ -302,9 +306,7 @@ public class EX22_7 {
         Point[] points = new Point[10];
 
         long start = System.currentTimeMillis();
-        for (int i = 0; i < points.length; i++) {
-            points[i] = new Point(Math.random() * 100, Math.random() * 100);
-        }
+
         for (int i = 0; i < points.length; i++) {
             points[i] = new Point(Math.random() * 100, Math.random() * 100);
         }
@@ -315,9 +317,9 @@ public class EX22_7 {
         Pair pair = Pair.getClosestPair(points);
         long stop2 = System.currentTimeMillis();
 
-        System.out.printf("%.5s\t%.5s\n", pair.p1.x, pair.p1.y);
-        System.out.printf("%.5s\t%.5s\n", pair.p2.x, pair.p2.y);
-        System.out.printf("%.5s\n",pair.getDistance());
+        System.out.printf("Pair p1: x-%.5s\ty-%.5s\n", pair.p1.x, pair.p1.y);
+        System.out.printf("Pair p2: x-%.5s\ty-%.5s\n", pair.p2.x, pair.p2.y);
+        System.out.printf("Distance is %.4s\n",pair.getDistance());
 
         System.out.println("Loop completed in " + (stop1 - start) +"ms");
         System.out.println("Closest pair of " + points.length + " points " +
@@ -330,7 +332,7 @@ public class EX22_7 {
             System.out.println();
             for(int j = 0; j < coords[i].length; j++){  // fill array with random numbers for points.
                 coords[i][j] = Math.random() *100;
-                System.out.printf("%2.3f\n",coords[i][j]);
+                System.out.printf("%2.3f, ",coords[i][j]);
                 stop1 = System.currentTimeMillis();
 
 
